@@ -1,6 +1,7 @@
 {
 	"name": "github-search",
 	"version": "0.1.0",
+	"homepage": "https://himanshu0601.github.io",
 	"private": true,
 	"dependencies": {
 		"@auth0/auth0-react": "^1.8.0",
@@ -18,10 +19,13 @@
 	},
 	"scripts": {
 		"start": "react-scripts start",
+		"build": "CI= react-scripts build",
 		"test": "react-scripts test",
 		"eject": "react-scripts eject",
 		"test:visual": "wdio run wdio.conf.js",
-		"test:cy": "npx cypress run"
+		"test:cy": "npx cypress run",
+		"predeploy": "npm run build",
+		"deploy": "gh-pages -d build"
 	},
 	"eslintConfig": {
 		"extends": "react-app"
